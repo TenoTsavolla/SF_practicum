@@ -1,6 +1,6 @@
 numder_tickets = int(input('Введите количество билетов: '))
 ticket_price = 0
-while numder_tickets != 0:
+for i in range(number_ticeks):
     age = int(input('Введите возраст посетителя: '))
     if age < 1:
         print('Вы ввели неверный возраст. Попробуйте еще раз: ')
@@ -14,6 +14,8 @@ while numder_tickets != 0:
     elif age > 100:
         print('Вы ввели неверный возраст. Попробуйте еще раз: ')
         continue
-    numder_tickets -= 1
+
+if number_tickets > 3:
+    ticket_price *= 0.9
 
 print('Сумма к оплате: ', ticket_price)
